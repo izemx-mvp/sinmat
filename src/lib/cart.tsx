@@ -7,7 +7,7 @@ export interface CartItem {
   productId: string;
   mode: CartMode;
   quantity: number;
-  days?: number;
+  days?: number | undefined;
 }
 
 interface CartContextValue {
