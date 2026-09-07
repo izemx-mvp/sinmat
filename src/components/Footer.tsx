@@ -16,12 +16,18 @@ export function Footer() {
 
   return (
     <footer className="bg-steel text-steel-foreground">
+      <div
+        className="h-1"
+        style={{ backgroundImage: "repeating-linear-gradient(135deg, #E8792B 0 8px, #3A3A3C 8px 16px)" }}
+        role="presentation"
+      />
+
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <Logo variant="light" />
           <p className="mt-4 max-w-xs text-sm text-steel-foreground/70">
-            Vente et location de matériel de chantier, outillage et EPI partout au Maroc. Votre partenaire équipement
-            depuis 2009.
+            Vente et location de matériel de chantier, outillage et EPI, ainsi que peinture, visserie et droguerie
+            industrielle. Votre partenaire équipement à Tanger depuis plus de 5 ans.
           </p>
           <div className="mt-5 flex gap-3">
             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
@@ -72,10 +78,10 @@ export function Footer() {
           </ul>
           <ul className="mt-6 space-y-2 text-sm text-steel-foreground/75">
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> Zone Industrielle Sidi Maârouf, Casablanca
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> Tanger, Maroc
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 shrink-0 text-primary" /> +212 5 22 00 00 00
+              <Phone className="h-4 w-4 shrink-0 text-primary" /> +212 5 39 00 00 00
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0 text-primary" /> contact@sinmat.ma
@@ -89,7 +95,7 @@ export function Footer() {
             Nouveaux arrivages, promos location et conseils chantier, une fois par mois.
           </p>
           {sent ? (
-            <p className="mt-4 flex items-center gap-2 rounded-md bg-steel-light/40 px-3 py-3 text-sm text-steel-foreground">
+            <p className="mt-4 flex items-center gap-2 rounded-md border border-dashed border-steel-light/50 bg-steel-light/40 px-3 py-3 text-sm text-steel-foreground">
               <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
               Merci, votre inscription est confirmée !
             </p>
@@ -101,7 +107,7 @@ export function Footer() {
                 placeholder="Votre e-mail professionnel"
                 className="border-steel-light/50 bg-steel-light/25 text-steel-foreground placeholder:text-steel-foreground/50"
               />
-              <Button type="submit" className="bg-primary font-display uppercase hover:bg-primary-light">
+              <Button type="submit" className="bg-primary font-display uppercase transition-colors hover:bg-primary-light">
                 S'inscrire
               </Button>
             </form>
@@ -112,7 +118,7 @@ export function Footer() {
       <div className="border-t border-steel-light/40">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-steel-foreground/60 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>© {new Date().getFullYear()} Sinmat SARL. Tous droits réservés.</p>
-          <p>RC Casablanca · ICE 000000000000000 · Livraison partout au Maroc</p>
+          <p>RC Tanger · ICE 000000000000000 · Livraison partout au Maroc</p>
         </div>
       </div>
     </footer>

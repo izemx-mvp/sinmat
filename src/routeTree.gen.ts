@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EspaceProRouteImport } from './routes/espace-pro'
+import { Route as LocationRouteImport } from './routes/location'
+import { Route as PanierRouteImport } from './routes/panier'
+import { Route as SeConnecterRouteImport } from './routes/se-connecter'
+import { Route as ProduitsIndexRouteImport } from './routes/produits/index'
+import { Route as ProduitsIdRouteImport } from './routes/produits/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceProRoute = EspaceProRouteImport.update({
+  id: '/espace-pro',
+  path: '/espace-pro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationRoute = LocationRouteImport.update({
+  id: '/location',
+  path: '/location',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PanierRoute = PanierRouteImport.update({
+  id: '/panier',
+  path: '/panier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeConnecterRoute = SeConnecterRouteImport.update({
+  id: '/se-connecter',
+  path: '/se-connecter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProduitsIndexRoute = ProduitsIndexRouteImport.update({
+  id: '/produits/',
+  path: '/produits/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProduitsIdRoute = ProduitsIdRouteImport.update({
+  id: '/produits/$id',
+  path: '/produits/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/espace-pro': typeof EspaceProRoute
+  '/location': typeof LocationRoute
+  '/panier': typeof PanierRoute
+  '/se-connecter': typeof SeConnecterRoute
+  '/produits/$id': typeof ProduitsIdRoute
+  '/produits/': typeof ProduitsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/espace-pro': typeof EspaceProRoute
+  '/location': typeof LocationRoute
+  '/panier': typeof PanierRoute
+  '/se-connecter': typeof SeConnecterRoute
+  '/produits/$id': typeof ProduitsIdRoute
+  '/produits': typeof ProduitsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/espace-pro': typeof EspaceProRoute
+  '/location': typeof LocationRoute
+  '/panier': typeof PanierRoute
+  '/se-connecter': typeof SeConnecterRoute
+  '/produits/$id': typeof ProduitsIdRoute
+  '/produits/': typeof ProduitsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/espace-pro'
+    | '/location'
+    | '/panier'
+    | '/se-connecter'
+    | '/produits/$id'
+    | '/produits/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/espace-pro'
+    | '/location'
+    | '/panier'
+    | '/se-connecter'
+    | '/produits/$id'
+    | '/produits'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/espace-pro'
+    | '/location'
+    | '/panier'
+    | '/se-connecter'
+    | '/produits/$id'
+    | '/produits/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  ContactRoute: typeof ContactRoute
+  EspaceProRoute: typeof EspaceProRoute
+  LocationRoute: typeof LocationRoute
+  PanierRoute: typeof PanierRoute
+  SeConnecterRoute: typeof SeConnecterRoute
+  ProduitsIdRoute: typeof ProduitsIdRoute
+  ProduitsIndexRoute: typeof ProduitsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace-pro': {
+      id: '/espace-pro'
+      path: '/espace-pro'
+      fullPath: '/espace-pro'
+      preLoaderRoute: typeof EspaceProRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/location': {
+      id: '/location'
+      path: '/location'
+      fullPath: '/location'
+      preLoaderRoute: typeof LocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/panier': {
+      id: '/panier'
+      path: '/panier'
+      fullPath: '/panier'
+      preLoaderRoute: typeof PanierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/se-connecter': {
+      id: '/se-connecter'
+      path: '/se-connecter'
+      fullPath: '/se-connecter'
+      preLoaderRoute: typeof SeConnecterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produits/': {
+      id: '/produits/'
+      path: '/produits'
+      fullPath: '/produits/'
+      preLoaderRoute: typeof ProduitsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produits/$id': {
+      id: '/produits/$id'
+      path: '/produits/$id'
+      fullPath: '/produits/$id'
+      preLoaderRoute: typeof ProduitsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  ContactRoute: ContactRoute,
+  EspaceProRoute: EspaceProRoute,
+  LocationRoute: LocationRoute,
+  PanierRoute: PanierRoute,
+  SeConnecterRoute: SeConnecterRoute,
+  ProduitsIdRoute: ProduitsIdRoute,
+  ProduitsIndexRoute: ProduitsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -87,8 +87,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Sinmat SARL : vente et location de matériel de chantier, outillage, jardinage et EPI partout au Maroc.",
       },
       { name: "author", content: "Sinmat SARL" },
+      { name: "theme-color", content: "#E8792B" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "fr_MA" },
+      { property: "og:site_name", content: "Sinmat SARL" },
+      { property: "og:title", content: "Sinmat SARL — Vente et location de matériel" },
+      {
+        property: "og:description",
+        content:
+          "Sinmat SARL : vente et location de matériel de chantier, outillage, jardinage et EPI partout au Maroc.",
+      },
+      { property: "og:image", content: "/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sinmat SARL — Vente et location de matériel" },
+      {
+        name: "twitter:description",
+        content:
+          "Sinmat SARL : vente et location de matériel de chantier, outillage, jardinage et EPI partout au Maroc.",
+      },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -98,7 +115,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/sinmat-favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/sinmat-favicon.png" },
     ],
   }),
   shellComponent: RootShell,
